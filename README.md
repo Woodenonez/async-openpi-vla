@@ -10,7 +10,7 @@ Apart from the dependencies of the original OpenPI project, this repository also
 - easydict>=1.13
 
 ## Preparation
-- Clone the original OpenPI repository (better to use the exact commit mentioned above), and copy the extra content in this repository to the OpenPI repository. Also update the `pyproject.toml` file according to the changes in this repository.
+- Clone the original OpenPI repository (better to use the exact commit mentioned above), and copy the extra content in this repository to the OpenPI repository. Also, update the `pyproject.toml` file according to the changes in this repository.
 
 - It is recommended to use `uv` to manage the Python environment. You can create a new environment and install the dependencies using the following commands:
 ```bash
@@ -36,7 +36,7 @@ This is optional if you don't need the VLM feature output.
 1. Modify the `pi0.py` file (`src/openpi/models/pi0.py`) to add the feature output in the `sample_actions` method.
 
 ### Others
-There are other scripts that are mainly used to facilitate the usage, and are not necessary for the main functionality. 
+Other scripts are mainly used to facilitate the usage and are not necessary for the main functionality. 
 
 ## Usage
 ### Inference
@@ -45,10 +45,10 @@ To run the policy server, use the following command:
 CUDA_VISIBLE_DEVICES=0 uv run scripts/serve_policy.py --port 8888 policy:checkpoint   --policy.config=pi05_libero   --policy.dir=/some_user/.cache/openpi/openpi-assets/checkpoints/pi05_libero
 ```
 Change the corresponding arguments according to your needs. 
-After the server is running, you can use the websocket client to connect to the server and perform inference.
+After the server is running, you can use the WebSocket client to connect to the server and perform inference.
 ```bash
 python client_inference/client.py --port 8888
 ```
 Optional arguments can be found in `client_inference/prepare_client.py`. 
-1. Sychronous inference: `client.py`
-2. Asychronous inference: `client_rt.py`
+1. Synchronous inference: `client.py`
+2. Asynchronous inference: `client_rt.py`
