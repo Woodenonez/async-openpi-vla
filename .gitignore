@@ -1,8 +1,8 @@
 # Data directories.
-assets/
 checkpoints/
 data/
 wandb/
+outputs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,3 @@
+[submodule "extern/openpi"]
+	path = extern/openpi
+	url = https://github.com/Physical-Intelligence/openpi.git
